@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { useSelector } from 'react-redux';
-
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
     const basket = useSelector(state => state.main.basket)
@@ -56,6 +56,9 @@ const Navbar = () => {
                                     {basketCount}
                                 </sup>
                             </Link>
+                        </li>
+                        <li className='burger'>
+                            <GiHamburgerMenu />
                         </li>
                     </ul>
                 </div>

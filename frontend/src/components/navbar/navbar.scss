@@ -39,7 +39,23 @@ nav {
                         color: red;
                     }
                 }
+
+                .burger {
+                    display: none;
+                }
             }
         }
+    }
+}
+
+
+
+@media only screen and (max-width: 850px) {
+    li {
+        display: none;
+    }
+
+    .burger {
+        display: block !important;
     }
 }

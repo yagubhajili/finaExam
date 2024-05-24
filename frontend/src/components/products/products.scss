@@ -123,3 +123,20 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 850px) {
+
+    .cardsHolder {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+
+
+@media only screen and (max-width: 550px) {
+
+    .cardsHolder {
+        grid-template-columns: 1fr !important;
+    }
+}

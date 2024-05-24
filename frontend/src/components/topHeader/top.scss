@@ -32,3 +32,15 @@
         }
     }
 }
+
+@media only screen and (max-width: 850px) {
+
+
+    .contact {
+        div {
+            p {
+                display: none !important;
+            }
+        }
+    }
+}
