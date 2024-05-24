@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 const AddPage = () => {
 
   const [products, setProducts] = useState([])
+  const [searchVal, setSearchVal] = useState('')
 
   useEffect(() => {
 
@@ -17,6 +18,24 @@ const AddPage = () => {
     })
 
   }, [products])
+
+
+  const sortedProducts = [...products].sort((a, b) => {
+
+    if (searchVal == 'az') {
+      return a.name.localeCompare(b.name)
+    } else if (searchVal == 'za') {
+      return b.name.localeCompare(a.name)
+    }
+    else if (searchVal == 'low') {
+      return a.price - b.price
+    }
+    else if (searchVal == 'high') {
+      return b.price - a.price
+    } else {
+      return 0
+    }
+  })
 
 
 
@@ -67,6 +86,24 @@ const AddPage = () => {
           <button type="submit">Submit</button>
         </Form>
       </Formik>
+
+      <button onClick={() => {
+        setSearchVal('az')
+      }}>a-z</button>
+      <button onClick={() => {
+        setSearchVal('za')
+      }}>z-a</button>
+      <button onClick={() => {
+        setSearchVal('low')
+      }}>
+        low-high
+      </button>
+      <button onClick={() => {
+        setSearchVal('high')
+      }}>
+        high-low
+      </button>
+
       <table>
         <thead>
           <th>
@@ -86,7 +123,7 @@ const AddPage = () => {
           </th>
         </thead>
         <tbody>
-          {products && products.map(product => {
+          {sortedProducts && sortedProducts.map(product => {
             return (
               <tr key={product._id}>
                 <td className='imageHolde'>

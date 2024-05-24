@@ -1,0 +1,136 @@
+#footer {
+    .container-footer {
+        margin: auto;
+        max-width: 1140px;
+        padding: 128px 20px;
+
+        .topFooter {
+            padding: 128px 20px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 30px;
+        }
+
+        .left-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: left;
+
+            p {
+                color: #737373;
+                line-height: 28px;
+            }
+        }
+
+        .mid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: left;
+
+            div {
+                display: flex;
+                gap: 20px;
+                font-size: 20px;
+                color: #999999;
+            }
+        }
+
+        .mid-left {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: left;
+
+            .footerUl {
+                display: flex;
+                flex-direction: column;
+                gap: 17px;
+
+                li {
+                    color: #999999;
+                }
+            }
+        }
+
+        .right-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: left;
+
+            h4 {
+                margin-bottom: 8px;
+                font-size: 20px;
+            }
+
+            p {
+                margin-bottom: 16px;
+            }
+
+            button {
+                background-color: black;
+                color: white;
+                border: 2px solid black;
+                transition: all 350ms;
+                padding: 6px 20px;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+
+            .imageHolder {
+                max-width: 285px;
+                margin-bottom: 16px;
+
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+        }
+
+        .bottom {
+            text-align: center;
+            color: #737373;
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+    .topFooter {
+        grid-template-columns: 1fr 1fr !important;
+        row-gap: 30px;
+
+    }
+
+    .footerUl {
+        li {
+            display: block !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .topFooter {
+        grid-template-columns: 1fr !important;
+        row-gap: 30px;
+
+    }
+
+    .footerUl {
+        li {
+            display: block !important;
+        }
+    }
+}
