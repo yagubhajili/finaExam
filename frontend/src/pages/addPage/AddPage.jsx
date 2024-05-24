@@ -22,9 +22,9 @@ const AddPage = () => {
 
   return (
     <section id='add'>
-         <Helmet>
-                <title>Add Page</title>
-            </Helmet>
+      <Helmet>
+        <title>Add Page</title>
+      </Helmet>
       <Formik
         initialValues={{ image: '', name: '', description: '', price: 0 }}
         validationSchema={Yup.object({
@@ -99,7 +99,7 @@ const AddPage = () => {
                   {product.description}
                 </td>
                 <td>
-                  {product.price}
+                  $ {product.price}
                 </td>
                 <td>
                   <button onClick={() => {
