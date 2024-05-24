@@ -3,6 +3,9 @@ nav {
     top: 0;
     background-color: white;
     z-index: 10000;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 
     .container-nav {
         max-width: 1140px;

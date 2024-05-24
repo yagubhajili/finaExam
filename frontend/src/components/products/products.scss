@@ -38,6 +38,12 @@
                 text-align: center;
                 padding: 0 15px;
 
+                &:hover {
+                    img {
+                        scale: 1.1;
+                    }
+                }
+
                 h3 {
                     margin-top: 29px;
                     margin-bottom: 14px;
@@ -76,10 +82,13 @@
                 }
 
                 .cardImage {
+                    overflow: hidden;
                     max-width: 350px;
                     max-height: 350px;
 
                     img {
+                        transition: all 0.2s;
+
                         width: 100%;
                         height: 100%;
                     }

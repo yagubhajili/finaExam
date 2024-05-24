@@ -1,0 +1,68 @@
+#about {
+    .container-about {
+        margin: auto;
+        max-width: 1140px;
+        padding: 80px 20px;
+        display: flex;
+
+        .imageLeft {
+            max-width: 760px;
+            max-height: 632px;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            padding: 140px 15px 140px 110px;
+            max-width: 380px;
+
+            .merchant {
+                margin-bottom: 8px;
+                color: #adb5bd;
+            }
+
+            h1 {
+                font-size: 40px;
+                margin-bottom: 16px;
+            }
+
+            .lorem {
+                color: #808080;
+                line-height: 28px;
+                margin-bottom: 24px;
+            }
+
+            .learn {
+                width: 124px;
+                height: 34px;
+                background-color: black;
+                color: white;
+                transition: all 350ms;
+                border: 2px solid black;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+
+    .container-about {
+        flex-direction: column;
+
+        .text {
+            max-width: 100% !important;
+            padding: 50px 20px !important;
+        }
+    }
+}
