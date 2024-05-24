@@ -1,0 +1,50 @@
+#basket {
+    .container-basket {
+        margin: auto;
+        max-width: 1140px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .card {
+            display: flex;
+            gap: 15px;
+            border: 1px solid gray;
+            padding: 5px 10px;
+            border-radius: 10px;
+
+            .imageHolder {
+                width: 200px;
+                height: 200px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .interaction {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                .forCount {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    button {
+                        padding: 5px 10px;
+                    }
+
+                    .red {
+                        background-color: red;
+                        color: white;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

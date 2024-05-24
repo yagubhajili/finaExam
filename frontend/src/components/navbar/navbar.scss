@@ -1,0 +1,45 @@
+nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10000;
+
+    .container-nav {
+        max-width: 1140px;
+        padding: 20px 20px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        .navigations {
+            ul {
+                display: flex;
+                gap: 60px;
+                justify-content: space-between;
+
+                li {
+                    a {
+                        font-size: 16px;
+                        color: black;
+                        transition: all 350ms;
+
+                        &:hover {
+                            color: #f16821;
+                        }
+                    }
+
+                    .red {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
